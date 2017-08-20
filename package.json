@@ -1,0 +1,29 @@
+{
+  "name": "red-light-coffee",
+  "version": "7.0.1",
+  "description": "mean-stack application for red light coffee",
+  "main": "index.js",
+  "scripts": {
+    "start": "node.index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uniqueone2000/red-light-coffee-ang2-v7.git"
+  },
+  "keywords": [
+    "MEAN",
+    "Stack",
+    "Angular2",
+    "Application"
+  ],
+  "author": "Charles Evelyn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uniqueone2000/red-light-coffee-ang2-v7/issues"
+  },
+  "homepage": "https://github.com/uniqueone2000/red-light-coffee-ang2-v7#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "mongoose": "^4.11.7"
+  }
+}
