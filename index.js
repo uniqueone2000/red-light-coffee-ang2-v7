@@ -1,11 +1,12 @@
 const express = require('express');
 const app  = express();
+const path = require('path');
+const bodyParser 	= require('body-parser');
 const mongoose = require('mongoose');
 const config = require('./rlconfig/rldatabase');
 
-mongoose.Promise = global.Promise;
 
-mongoose.connect(config.uri, (err) => {
+const promise = mongoose.connect(config.uri, {useMongoClient: true},(err) => {
 	if (err) {
 		console.log('Unable to connect to the database: ', err);
 	} else {
@@ -14,8 +15,10 @@ mongoose.connect(config.uri, (err) => {
 	}
 });
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.get('*', (req, res) => {
-	res.send('hello charles');
+	res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 const port = 3500;
